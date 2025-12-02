@@ -1,62 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coral Recorder - Technical Support</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: #1e1e1e;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-      max-width: 500px;
-      text-align: center;
-    }
-    h1 {
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-    p {
-      color: #cccccc;
-      line-height: 1.6;
-    }
-    a {
-      color: #4dabf7;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-      color: #82cfff;
-    }
-    .footer {
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMOX - 骑行组队沟通应用 | 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .feature-desc {
+            color: #666;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: #666;
+            padding-left: 20px;
+            border-left: 3px solid #667eea;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .scene {
+            color: #555;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 36px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Application Technical Support</h1>
-    <p>Thank you for using <strong>Coral Recorder</strong>.</p>
-    <p>If you encounter any issues while using our application, please feel free to reach out to us:</p>
-    <p><strong>Email:</strong> <a href="mailto:xingbeibei2006@163.com">xingbeibei2006@163.com</a></p>
-    <div class="footer">
-      <p>We usually respond within 1–2 business days.</p>
+    <div class="container">
+        <header>
+            <div class="logo">NMOX</div>
+            <p class="tagline">骑行组队沟通应用 | 技术支持</p>
+        </header>
+
+        <div class="card">
+            <h2>关于 NMOX</h2>
+            <p class="intro">NMOX是一款专为骑行爱好者设计的组队沟通应用。通过与智能眼镜的无缝绑定，让你在骑行中解放双手，随时与队友保持清晰、流畅的语音交流。</p>
+        </div>
+
+        <div class="card">
+            <h2>功能亮点</h2>
+            <ul class="features">
+                <li>
+                    <div>
+                        <span class="feature-title">快速绑定</span>
+                        <p class="feature-desc">通过扫描二维码即可完成智能眼镜连接，无需复杂设置。</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="feature-title">实时对讲</span>
+                        <p class="feature-desc">高清语音通话，支持多人同时在线，延迟低、音质清晰。</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="feature-title">建群组队</span>
+                        <p class="feature-desc">轻松创建骑行群组，好友输入群号即可加入。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>适用场景</h2>
+            <p class="scene">无论是双人结伴、多人团建，还是大型骑行活动，NMOX都能为你提供稳定、便捷的沟通体验，让每一次骑行更加安心、愉快。</p>
+        </div>
+
+        <div class="card">
+            <h2>常见问题 FAQ</h2>
+            <div class="faq-item">
+                <p class="faq-q">Q: 如何绑定智能眼镜？</p>
+                <p class="faq-a">打开NMOX应用，进入设备绑定页面，使用扫描功能扫描智能眼镜上的二维码即可完成绑定。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Q: 支持多少人同时语音通话？</p>
+                <p class="faq-a">NMOX支持多人实时语音对讲，满足团队骑行的沟通需求。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Q: 如何加入骑行群组？</p>
+                <p class="faq-a">获取群组号码后，在应用内输入群号即可加入对应的骑行群组。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">Q: 通话质量如何？</p>
+                <p class="faq-a">NMOX采用高清语音技术，延迟低、音质清晰，确保骑行中的顺畅沟通。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>联系我们</h2>
+            <div class="contact-info">
+                <p>如果您在使用过程中遇到任何问题，或有任何建议，欢迎通过以下方式联系我们：</p>
+                <a href="mailto:xingbeibei2006@163.com" class="email-link">xingbeibei2006@163.com</a>
+                <p style="margin-top: 20px; font-size: 14px; color: #888;">我们会在1-2个工作日内回复您的邮件</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>下载NMOX，让科技与骑行同行，享受更安全、更畅快的骑行之旅。</p>
+            <p style="margin-top: 10px;">&copy; 2024 NMOX. All rights reserved.</p>
+        </footer>
     </div>
-  </div>
 </body>
 </html>
